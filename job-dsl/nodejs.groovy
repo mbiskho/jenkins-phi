@@ -1,4 +1,4 @@
-job('NodeJS example') {
+job('Vanila Node App') {
     scm {
         git('https://github.com/mbiskho/jenkins-phi.git') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('mbiskho')
@@ -13,6 +13,8 @@ job('NodeJS example') {
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
     steps {
+
+        shell("cd demo-app/")
         shell("npm install")
     }
 }

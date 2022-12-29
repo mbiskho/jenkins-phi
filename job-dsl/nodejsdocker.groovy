@@ -1,4 +1,4 @@
-job('NodeJS Docker example') {
+job('Node With Docker') {
     
     scm {
         git('https://github.com/mbiskho/jenkins-phi.git') {  node -> // is hudson.plugins.git.GitSCM
